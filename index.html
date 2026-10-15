@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07070d">
+  <meta name="description" content="A little glowing garden, made with love.">
+  <title>A Garden of Flowers 🌷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro" class="intro" aria-live="polite">
+    <div class="intro-copy">
+      <p id="typed-line" class="typed-line"></p>
+      <p id="second-line" class="second-line"></p>
+      <button id="enter-button" class="enter-button" hidden>🌸 Enter the Garden 🌹</button>
+    </div>
+    <button id="skip-intro" class="skip-intro" type="button">Skip intro ↗</button>
+  </div>
+
+  <main id="garden-app" class="garden-app" hidden>
+    <div class="sky-glow"></div>
+    <div class="stars" id="stars" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"><span></span></div>
+    <div class="fireflies" id="fireflies" aria-hidden="true"></div>
+
+    <header class="garden-header">
+      <p class="eyebrow">A LITTLE PLACE JUST FOR YOU</p>
+      <h1>A Garden of <em>Flowers</em></h1>
+      <p class="subtitle">Every flower holds a little thought of you.</p>
+    </header>
+
+    <section class="garden" id="garden" aria-label="Interactive flower garden">
+      <div class="horizon"></div>
+      <div class="ground"></div>
+      <div class="flower-field" id="flower-field"></div>
+      <div class="garden-hint">Tap a flower to change its colors ✨</div>
+    </section>
+
+    <section class="controls" aria-label="Garden controls">
+      <button id="plant-button" class="control-button">🌹 Plant a Rose</button>
+      <button id="sound-button" class="control-button" aria-pressed="false">♫ Sound: Off</button>
+      <button id="message-button" class="control-button">💌 A little message</button>
+    </section>
+    <p class="footer-note">Made with a little magic & a lot of love <span>✦</span></p>
+  </main>
+
+  <dialog id="message-dialog" class="message-dialog">
+    <button id="close-dialog" class="close-dialog" aria-label="Close message">×</button>
+    <div class="dialog-flower">🌷</div>
+    <p class="eyebrow">A NOTE FROM THE GARDEN</p>
+    <h2>For someone <em>special</em></h2>
+    <p class="message-text">If I could give you one thing in life, I would give you the ability to see yourself through my eyes. Then you would know how wonderful you truly are. 🌸</p>
+    <button id="dialog-ok" class="control-button">Keep blooming ✨</button>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
